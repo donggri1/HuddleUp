@@ -1,0 +1,163 @@
+/* 전체 스타일 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+    background-color: #f5f7fa;
+    padding: 20px;
+}
+
+/* 카드 컨테이너 스타일 */
+.board-container {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+/* 카드 스타일 */
+.card {
+    width: 280px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    flex-shrink: 0;
+}
+
+.card-header {
+    padding: 15px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+}
+
+.card-header-bg {
+    height: 120px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background-size: cover;
+    background-position: center;
+}
+
+.card-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    margin: 15px 15px 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-title .options {
+    cursor: pointer;
+    color: #888;
+}
+
+/* 태그 스타일 */
+.tags {
+    display: flex;
+    gap: 8px;
+    margin: 0 15px 10px;
+}
+
+.tag {
+    padding: 3px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.tag-primary {
+    background-color: #FF4B91;
+    color: white;
+}
+
+.tag-secondary {
+    background-color: #00C4FF;
+    color: white;
+}
+
+.tag-warning {
+    background-color: #FFB800;
+    color: white;
+}
+
+/* 카드 아이템 스타일 */
+.card-items {
+    padding: 0 15px;
+}
+
+.card-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.card-item:last-child {
+    border-bottom: none;
+}
+
+.card-item-content {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.card-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card-item-meta {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #888;
+    font-size: 12px;
+}
+
+.card-item-meta i {
+    font-size: 14px;
+}
+
+.card-item-users {
+    display: flex;
+}
+
+.card-item-users img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 2px solid white;
+    margin-left: -8px;
+}
+
+.card-item-users img:first-child {
+    margin-left: 0;
+}
+
+/* 카드 추가 버튼 */
+.add-card {
+    padding: 15px;
+    color: #888;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    border-top: 1px solid #f0f0f0;
+}
+
+.add-card:hover {
+    background-color: #f9f9f9;
+}
+
+.add-card i {
+    font-size: 16px;
+} 

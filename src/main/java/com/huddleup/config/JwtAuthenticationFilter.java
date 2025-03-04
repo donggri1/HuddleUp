@@ -25,8 +25,18 @@ public class JwtAuthenticationFilter extends OncePerRequestFilter {
         this.userDetailsService = userDetailsService;
     }
 
+    @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain chain)
             throws ServletException, IOException {
+        
+        // 홈페이지와 정적 리소스는 필터링하지 않음
+        String path = request.getRequestURI();
+        if (path.equals("/") || path.startsWith("/css/") || path.startsWith("/js/") || 
+            path.startsWith("/images/") || path.startsWith("/webjars/")) {
+            chain.doFilter(request, response);
+            return;
+        }
+        
         final String authorizationHeader = request.getHeader("Authorization");
 
         String username = null;

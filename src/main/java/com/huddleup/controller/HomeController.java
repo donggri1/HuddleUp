@@ -9,10 +9,10 @@ import java.util.Map;
 @RestController
 public class HomeController {
 
-    @GetMapping("/")
-    public Map<String, String> home() {
+    @GetMapping("/api/status")
+    public Map<String, String> getStatus() {
         Map<String, String> response = new HashMap<>();
-        response.put("message", "HuddleUp API 서버에 오신 것을 환영합니다!");
+        response.put("message", "HuddleUp API 서버가 정상적으로 실행 중입니다.");
         response.put("status", "running");
         return response;
     }
